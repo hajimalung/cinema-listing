@@ -4,3 +4,8 @@ export interface CinemaBookingModal {
   totalSeats: number;
   bookedSeats: number[];
 }
+
+export interface CinemaBasicDetails{
+  cinemaId: string;
+  cinemaName: string;
+}

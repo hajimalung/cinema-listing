@@ -7,6 +7,9 @@
   background-color: #ccc;
   margin: 0 auto 20px auto;
   border-radius: 10px;
+  text-align: center;
+  line-height: 20px;
+  padding: 2px;
 }
 .seating-area{
   display: flex;
@@ -20,6 +23,8 @@
   background-color: #4CAF50;
   margin: 5px;
   border-radius: 5px;
+  text-align: center;
+  line-height: 30px;
   cursor: pointer;
 }.seat.booked{
   background-color: #999;
