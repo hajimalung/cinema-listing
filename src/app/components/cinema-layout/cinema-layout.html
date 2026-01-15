@@ -1,0 +1,13 @@
+Cinema Layout Works!!!
+<mat-card class="layout-card">
+  <mat-card-content>
+    <div class="screen" ></div>
+    <div class="seating-area">
+      @for (seat of seatsStatus(); track seat.seatNumber) {
+        <div class="seat" [class.booked]="seat.isBooked">
+          {{ seat.seatNumber }}
+        </div>
+      }
+    </div>
+  </mat-card-content>
+</mat-card>

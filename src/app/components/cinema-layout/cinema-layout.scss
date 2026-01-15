@@ -1,0 +1,27 @@
+.layout-card{
+  margin: 20px;
+}
+.screen{
+  width: 80%;
+  height: 20px;
+  background-color: #ccc;
+  margin: 0 auto 20px auto;
+  border-radius: 10px;
+}
+.seating-area{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.seat{
+  width: 30px;
+  height: 30px;
+  background-color: #4CAF50;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}.seat.booked{
+  background-color: #999;
+  cursor: not-allowed;
+}
