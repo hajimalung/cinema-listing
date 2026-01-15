@@ -1,7 +1,6 @@
 
 import { signalStore, withState, withMethods, patchState } from '@ngrx/signals';
 import { inject } from '@angular/core';
-import { firstValueFrom } from 'rxjs';
 import { CinemaBookingApi } from '../services/cinema-booking-api';
 import { CinemaBookingModal } from '../data-model/cinema-booking-modal';
 interface CinemaBookingStatusState {
@@ -25,7 +24,6 @@ export const cinemaBookingStatusStore = signalStore(
         patchState(store, { isLoading: true,  error: null });
         bookingStatusApi.getAvailableSeats(cinemaId).subscribe({
           next: (data) => {
-            console.log('Fetched booking details:', data);
             patchState(store, { bookingDetails: data, isLoading: false });
           },
           error: (err) => {

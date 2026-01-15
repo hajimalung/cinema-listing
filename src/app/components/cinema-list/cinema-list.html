@@ -1,13 +1,15 @@
-<mat-accordion>
-  @for (cinema of cinemasList(); track cinema.cinemaId) {
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <mat-panel-title>{{ cinema.cinemaName }}</mat-panel-title>
-        <mat-panel-description>
-          Id : {{ cinema.cinemaId }}
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-      <app-cinema-layout [cinemaId]="cinema.cinemaId" />
-    </mat-expansion-panel>
-  }
-</mat-accordion>
+<div class="list-panel">
+  <mat-accordion>
+    @for (cinema of cinemasList(); track cinema.cinemaId) {
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>{{ cinema.cinemaName }}</mat-panel-title>
+          <mat-panel-description>
+            Id : {{ cinema.cinemaId }}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <app-cinema-layout [cinemaId]="cinema.cinemaId" />
+      </mat-expansion-panel>
+    }
+  </mat-accordion>
+</div>

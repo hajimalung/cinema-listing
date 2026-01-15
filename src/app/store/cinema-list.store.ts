@@ -24,7 +24,6 @@ export const cinemaListStore = signalStore(
         patchState(store, { isLoading: true, error: null });
         cinemaListingApi.getCinemasForMovie(movieId).subscribe({
           next: (data) => {
-            console.log('Fetched cinema list:', data);
             patchState(store, { cinemas: data, isLoading: false });
           },
           error: (err) => {
